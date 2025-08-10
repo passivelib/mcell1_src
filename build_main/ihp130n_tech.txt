@@ -1,0 +1,222 @@
+# IHP 130nm BiCMOS S technology
+
+grid = 0.005
+
+#######################################################
+# Top metal 2
+# Thicknes 3 um
+#######################################################
+
+layer TM2 metal
+    gdsNum = 134
+    gdsType = 0
+    minS = 2.0
+    minW = 2.0
+    dSub = 110.19
+    metThic = 3
+    metCond = 56e6
+endLayer
+
+#######################################################
+# Top metal 1
+# Thicknes 2 um
+#######################################################
+
+layer TM1 metal
+    gdsNum = 126
+    gdsType = 0
+    minS = 1.64
+    minW = 1.64
+    dSub = 105.39
+    metThic = 2
+    metCond = 56e6
+endLayer
+
+#######################################################
+# Metal 5
+# Thicknes 0.49 um
+#######################################################
+
+layer M5 metal
+    gdsNum = 67
+    gdsType = 0
+    minS = 0.6
+    minW = 0.6
+    dSub = 104.05
+    metThic = 0.49
+    metCond = 56e6
+endLayer
+
+#######################################################
+# Metal 4
+# Thicknes 0.49 um
+#######################################################
+
+layer M4 metal
+    gdsNum = 50
+    gdsType = 0
+    minS = 0.6
+    minW = 0.6
+    dSub = 103.02
+    metThic = 0.49
+    metCond = 56e6
+endLayer
+
+#######################################################
+# Metal 3
+# Thicknes 0.49 um
+#######################################################
+
+layer M3 metal
+    gdsNum = 30
+    gdsType = 0
+    minS = 0.6
+    minW = 0.6
+    dSub = 101.99
+    metThic = 0.49
+    metCond = 56e6
+endLayer
+
+#######################################################
+# Metal 2
+# Thicknes 0.49 um
+#######################################################
+
+layer M2 metal
+    gdsNum = 10
+    gdsType = 0
+    minS = 0.6
+    minW = 0.6
+    dSub = 100.96
+    metThic = 0.49
+    metCond = 56e6
+endLayer
+
+
+#######################################################
+# Metal 1
+# Thicknes 0.42 um
+#######################################################
+
+layer M1 metal
+    gdsNum = 8
+    gdsType = 0
+    minS = 0.6
+    minW = 0.6
+    dSub = 100
+    metThic = 0.42
+    metCond = 56e6
+    metCond = 56e6
+endLayer
+
+
+#######################################################
+# Via M1 M2
+#######################################################
+
+layer V12 via
+    gdsNum = 19
+    gdsType = 0
+    topMet = M2
+    botMet = M1
+    viaEnc = 0.05
+    viaSize = 0.19
+    viaSpace = 0.29
+    viaCond = 56e6
+endLayer
+
+#######################################################
+# Via M2 M3
+#######################################################
+
+layer V23 via
+    gdsNum =29
+    gdsType = 0
+    topMet = M3
+    botMet = M2
+    viaEnc = 0.05
+    viaSize = 0.19
+    viaSpace = 0.29
+    viaCond = 56e6
+endLayer
+
+#######################################################
+# Via M3 M4
+#######################################################
+
+layer V34 via
+    gdsNum = 49
+    gdsType = 0
+    topMet = M4
+    botMet = M3
+    viaEnc = 0.05
+    viaSize = 0.19
+    viaSpace = 0.29
+    viaCond = 56e6
+endLayer
+
+#######################################################
+# Via M4 M5
+#######################################################
+
+layer V45 via
+    gdsNum = 66
+    gdsType = 0
+    topMet = M5
+    botMet = M4
+    viaEnc = 0.05
+    viaSize = 0.19
+    viaSpace = 0.29
+    viaCond = 56e6
+endLayer
+
+#######################################################
+# Via M5 TM1
+#######################################################
+
+layer V5T1 via
+    gdsNum = 125
+    gdsType = 0
+    topMet = TM1
+    botMet = M5
+    viaEnc = 0.42
+    viaSize = 0.42
+    viaSpace = 0.42
+    viaCond = 56e6
+endLayer
+
+#######################################################
+# Via TM1 TM2
+#######################################################
+
+layer VT1T2 via
+    gdsNum = 133
+    gdsType = 0
+    topMet = TM2
+    botMet = TM1
+    viaEnc = 0.5
+    viaSize = 0.9
+    viaSpace = 1.06
+    viaCond = 56e6
+endLayer
+
+#######################################################
+# dielectric 1
+#######################################################
+
+layer ox1 dielectric
+    dSub=100
+    er=4.2
+    ei=0	
+endLayer
+
+#######################################################
+# dielectric 2
+#######################################################
+
+layer ox1 dielectric
+    dSub=120
+    er=2
+    ei=1	
+endLayer
+

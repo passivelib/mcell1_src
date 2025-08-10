@@ -1,0 +1,21 @@
+# Technology grid
+grid: 0.005
+
+# Metal layers
+metal:
+  M1:   {h: 10, t: 0.42,  w: 0.60,  s: 0.60,	sigma: 21.645e6, 	num: 8,	  typ: 0}
+  M2:   {h: 20, t: 0.49,	w: 0.60,  s: 0.60,  sigma: 23.1911e6, num: 10,  typ: 0}
+  M3:   {h: 30, t: 0.49,	w: 0.60,  s: 0.60,  sigma: 23.1911e6, num: 30,  typ: 0}
+  M4:   {h: 40, t: 0.49,	w: 0.60,  s: 0.60,  sigma: 23.1911e6, num: 50,  typ: 0}
+  M5:   {h: 50, t: 0.49,	w: 0.60,  s: 0.60,  sigma: 23.1911e6, num: 67,  typ: 0}
+  TM1:  {h: 60, t: 2,		  w: 1.64,  s: 1.64,  sigma: 27.7778e6, num: 126, typ: 0}
+  TM2:  {h: 70, t: 3, 	  w: 2.00,  s: 2.00,	sigma: 30.303e6,  num: 134, typ: 0}
+
+# Via layers
+via:
+  V12:    {top: M2  ,bottom: M1,  w: 0.19, s: 0.29, e: 0.05, sigma: 1.6875e6,  num: 19,  typ: 0}
+  V23:    {top: M3  ,bottom: M2,  w: 0.19, s: 0.29, e: 0.05, sigma: 1.6875e6,  num: 29,  typ: 0}
+  V34:    {top: M4  ,bottom: M3,  w: 0.19, s: 0.29, e: 0.05, sigma: 1.6875e6,  num: 49,  typ: 0}
+  V45:    {top: M5  ,bottom: M4,  w: 0.19, s: 0.29, e: 0.05, sigma: 1.6875e6,  num: 66,  typ: 0}
+  V5T1:   {top: TM1 ,bottom: M5,  w: 0.42, s: 0.42, e: 0.42, sigma: 2.19149e6, num: 125, typ: 0}
+  VT1T2:  {top: TM2 ,bottom: TM1, w: 0.90, s: 1.06, e: 0.50, sigma: 3.14254e6, num: 133, typ: 0}

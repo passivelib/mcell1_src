@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/ext_*",
+                "${workspaceFolder}/mcell_error",
+                "${workspaceFolder}/mcell_technology",
+                "${workspaceFolder}/mcell_components",
+                "${workspaceFolder}/mcell_library",
+                "${workspaceFolder}/mcell_command_line",
+                "${workspaceFolder}/mcell_fast_henry",
+                "${workspaceFolder}/mcell_global",
+                "${workspaceFolder}/mlic_license",
+                "/usr/include/c++/9"
+            ],
+            "compilerPath": "/usr/bin/g++-9",
+            "cStandard": "c11",
+            "intelliSenseMode": "linux-gcc-x64",
+            "cppStandard": "gnu++20"
+        }
+    ],
+    "version": 4
+}
