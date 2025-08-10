@@ -1,5 +1,5 @@
 
-# Project: Make Cell FIRST VERSION (MCELL1)
+# Project: Make Cell Version 1 (MCELL1)
 ## Documentation
 
 The documentation for this project is organized into:
