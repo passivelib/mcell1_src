@@ -114,15 +114,17 @@ ${SRC_DIR}/mlic_license
 # ------------------------------------------------------
 set(CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_STATIC_LIBRARY_SUFFIX})
 
-# ------------------------------------------------------------------------------------------------
+# ------------------------------------------------------
 # INTEL MKL
-# ------------------------------------------------------------------------------------------------
+# ------------------------------------------------------
 # https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-link-line-advisor.html
-# ------------------------------------------------------------------------------------------------
+# ------------------------------------------------------
+#===============================================================================
 # Input parameters
-# ------------------------------------------------------------------------------------------------
+#=================
+#-------------
 # Main options
-# ------------------------------------------------------------------------------------------------
+#-------------
 # MKL_ROOT: oneMKL root directory (May be required for non-standard install locations. Optional otherwise.)
 #    Default: use location from MKLROOT environment variable or <Full path to this file>/../../../ if MKLROOT is not defined
 # MKL_ARCH
@@ -147,9 +149,9 @@ set(CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_STATIC_LIBRARY_SUFFIX})
 # MKL_MPI
 #    Values:  intelmpi, mpich, openmpi, msmpi, mshpc
 #    Default: intelmpi
-# ------------------------------------------------------------------------------------------------
+#-----------------------------------
 # Special options (OFF by default)
-# ------------------------------------------------------------------------------------------------
+#-----------------------------------
 # ENABLE_BLAS95:      Enables BLAS Fortran95 API
 # ENABLE_LAPACK95:    Enables LAPACK Fortran95 API
 # ENABLE_BLACS:       Enables cluster BLAS library
@@ -157,9 +159,8 @@ set(CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_STATIC_LIBRARY_SUFFIX})
 # ENABLE_CPARDISO:    Enables cluster PARDISO functionality
 # ENABLE_SCALAPACK:   Enables cluster LAPACK library
 # ENABLE_OMP_OFFLOAD: Enables OpenMP Offload functionality
-# ------------------------------------------------------------------------------------------------
-#set(MKLROOT /opt/intel/oneapi/mkl/latest)
-set(MKL_DIR /opt/intel/oneapi/mkl/latest/lib/cmake/mkl)
+#-----------------------------------
+set(MKLROOT /opt/intel/oneapi/mkl/latest)
 set(MKL_ARCH intel64)
 set(MKL_LINK static)
 set(MKL_THREADING sequential)
@@ -171,6 +172,7 @@ set(MKL_INTERFACE ilp64)
 find_package(MKL CONFIG REQUIRED PATH /opt/intel/oneapi/mkl/latest)
 target_compile_options(mcell PUBLIC $<TARGET_PROPERTY:MKL::MKL,INTERFACE_COMPILE_OPTIONS>)
 target_include_directories(mcell PUBLIC $<TARGET_PROPERTY:MKL::MKL,INTERFACE_INCLUDE_DIRECTORIES>)
+
 
 # ------------------------------------------------------
 # link libraries
